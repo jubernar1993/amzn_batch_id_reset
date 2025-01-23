@@ -25,4 +25,4 @@ phases:
 
 artifacts:
   files:
-    - tfplan  # Make sure terraform plan generates tfplan file and upload it as an artifact
+    - tfplan  # Make sure terraform plan generates tfplan file and upload it as an artifact.

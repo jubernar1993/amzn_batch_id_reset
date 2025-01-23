@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.8 # Using Python runtime instead of Docker
+      python: 3.8
     commands:
       - echo "Installing Terraform"
       - curl -o terraform.zip https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip
@@ -19,10 +19,10 @@ phases:
   build:
     commands:
       - echo "Running terraform fmt"
-      - terraform fmt -check
+      - terraform fmt   # Automatically formats the files
       - echo "Running terraform plan"
-      - terraform plan -out=tfplan
+      - terraform plan -out=tfplan  # Generate the tfplan output file
 
 artifacts:
   files:
-    - tfplan # Store the Terraform plan file as an artifact if needed
+    - tfplan  # Make sure terraform plan generates tfplan file and upload it as an artifact

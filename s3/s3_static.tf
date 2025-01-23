@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "AMZN_BATCH_ID" {
-  bucket = "amznbatchid"
+  bucket = var.s3_bucket_name
 
   tags = {
     Name        = "amznbatchid"

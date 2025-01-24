@@ -23,6 +23,11 @@ phases:
       - echo "Running terraform plan"
       - terraform plan -out=tfplan  # Generate the tfplan output file
 
+  post_build:
+    commands:
+      - echo "Deploying file to S3..."
+      - aws s3 cp /amzn_batch_id_reset/s3/static_files/* s3://your-s3-bucket-name/desired-path/
+
 artifacts:
   files:
     - tfplan  # Make sure terraform plan generates tfplan file and upload it as an artifact.

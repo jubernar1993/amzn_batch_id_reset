@@ -23,7 +23,7 @@ phases:
       - echo "Running terraform plan"
       - terraform plan -out=tfplan  # Generate the tfplan output file
       - echo "Applying terraform configuration"
-      - terraform destroy --auto-approve tfplan  # Apply the changes defined in the plan
+      - terraform apply --auto-approve tfplan  # Apply the changes defined in the plan
 
   post_build:
     commands:

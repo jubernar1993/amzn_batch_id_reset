@@ -28,7 +28,7 @@ phases:
   post_build:
     commands:
       - echo "Deploying file to S3..."
-      - aws s3 cp amzn_batch_id_reset/s3/static_files/ s3://amzn-batch-id-012025/ --recursive
+      - aws s3 cp /amzn_batch_id_reset/s3/static_files/ s3://amzn-batch-id-012025/ --recursive
 
 artifacts:
   files:

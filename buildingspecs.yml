@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.9 # Optional, include if Python is needed for other steps.
     commands:
-      - chmod +x /terraform-install.sh
+      - chmod +x terraform-install.sh
       - ./terraform-install.sh
       - chmod +x /s3/static_files/zip.sh
       - ./s3/static_files/zip.sh

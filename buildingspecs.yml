@@ -7,10 +7,9 @@ phases:
     commands:
       - chmod +x install.sh
       - ./install.sh
-      - chmod +x /s3/static_files/zip.sh 
-      - ./s3/static_files/static_files.zip
+      - chmod +x /s3/static_files/zip.sh
+      - ./s3/static_files/zip.sh
   
-
   pre_build:
     commands:
       - echo Initializing Terraform...
@@ -25,6 +24,5 @@ phases:
   
 artifacts:
   files:
-    - tfplan\
-    ]''
+    - tfplan
   discard-paths: yes

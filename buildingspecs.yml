@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       python: 3.9 # Optional, include if Python is needed for other steps.
     commands:
+      - cd /amzn_batch_id_reset
       - chmod +x terraform-install.sh
       - ./terraform-install.sh
       - chmod +x /s3/static_files/zip.sh
